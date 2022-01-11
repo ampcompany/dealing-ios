@@ -52,27 +52,27 @@
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="88o-QZ-0T7">
-                                <rect key="frame" x="0.0" y="74" width="390" height="240"/>
+                                <rect key="frame" x="0.0" y="74" width="390" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="XOs-hx-lpd"/>
+                                    <constraint firstAttribute="height" constant="200" id="XOs-hx-lpd"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nvy-kh-VVL">
-                                    <size key="itemSize" width="391" height="240"/>
+                                    <size key="itemSize" width="391" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sliderCell" id="k3M-Su-2qe" customClass="ImageSliderCollectionViewCell" customModule="Dealing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="391" height="240"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="391" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yrJ-fL-WIJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="391" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="391" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ZO-gr-gvV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="391" height="240"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="391" height="200"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -82,7 +82,7 @@
                                                 <constraint firstItem="4ZO-gr-gvV" firstAttribute="leading" secondItem="yrJ-fL-WIJ" secondAttribute="leading" id="yrf-6O-pK7"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="391" height="240"/>
+                                        <size key="customSize" width="391" height="200"/>
                                         <connections>
                                             <outlet property="imageView" destination="4ZO-gr-gvV" id="5xl-Hh-j49"/>
                                         </connections>

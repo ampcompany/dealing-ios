@@ -13,23 +13,31 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var timer : Timer?
     var currentCellIndex = 0
-    var photosArr = [UIImage(named: "sliderimage1"),UIImage(named: "sliderimage2"),UIImage(named: "sliderimage3"),UIImage(named: "sliderimage4"),UIImage(named: "sliderimage5"),UIImage(named: "sliderimage6")]
+    var photosArr = [
+        UIImage(named: "sliderimage1"),
+        UIImage(named: "sliderimage2"),
+        UIImage(named: "sliderimage3"),
+        UIImage(named: "sliderimage4")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         imageSliderCollectionView.delegate = self
         imageSliderCollectionView.dataSource = self
+        startTimer()
         // Do any additional setup after loading the view.
     }
     
     func startTimer(){
-            timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
         }
     
     @objc func moveToNextIndex(){
-            currentCellIndex += 1
-            imageSliderCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
+        currentCellIndex += 1
+//        if currentCellIndex == photosArr.count{
+//            currentCellIndex = 0
+//        }
+        print(currentCellIndex)
+        self.imageSliderCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
             
         }
     
@@ -44,14 +52,7 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-    }
-        
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 0
-    }
+    
+    
 
 }
