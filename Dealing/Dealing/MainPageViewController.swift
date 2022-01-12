@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MainPageViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var imageSliderCollectionView : UICollectionView!
     
@@ -33,13 +33,16 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     @objc func moveToNextIndex(){
         currentCellIndex += 1
-//        if currentCellIndex == photosArr.count{
-//            currentCellIndex = 0
-//        }
-        print(currentCellIndex)
-        self.imageSliderCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
-            
+        if currentCellIndex == photosArr.count{
+            currentCellIndex = 0
+            imageSliderCollectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: true
+            )
+        } else {
+            let cellSize = CGSize(width: imageSliderCollectionView.frame.width, height: imageSliderCollectionView.frame.height);
+            let contentOffset = imageSliderCollectionView.contentOffset;
+            imageSliderCollectionView.scrollRectToVisible(CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true);
         }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photosArr.count
@@ -50,6 +53,18 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.imageView.image = photosArr[indexPath.row]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: imageSliderCollectionView.frame.width, height: imageSliderCollectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
     
