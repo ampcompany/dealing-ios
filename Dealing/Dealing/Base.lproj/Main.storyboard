@@ -89,14 +89,91 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="FPk-kM-MOI">
+                                <rect key="frame" x="16" y="282" width="359" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFO-Uh-izy">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="WWu-ft-enn"/>
+                                            <constraint firstAttribute="width" constant="55" id="crW-Bx-0du"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <state key="normal" title="인기" image="2376926">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C11-tn-fW7">
+                                        <rect key="frame" x="76" y="0.0" width="55" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="776-W9-bdZ"/>
+                                            <constraint firstAttribute="height" constant="72" id="bhg-N7-exb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <state key="normal" title="버닝" image="fire_icon">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s89-XF-17F">
+                                        <rect key="frame" x="152" y="0.0" width="55" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="hXr-XS-pgM"/>
+                                            <constraint firstAttribute="height" constant="72" id="pFq-je-Q4e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <state key="normal" title="신규" image="new_icon">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaP-dL-hS3">
+                                        <rect key="frame" x="228" y="0.0" width="55" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="c6X-yo-MgM"/>
+                                            <constraint firstAttribute="width" constant="55" id="et7-x8-P8b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <state key="normal" title="찜" image="love_icon_bk">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIS-9c-iLA">
+                                        <rect key="frame" x="304" y="0.0" width="55" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="5Fx-3K-k52"/>
+                                            <constraint firstAttribute="width" constant="55" id="IoG-uR-f4c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <state key="normal" title="최신" image="clock_icon_bk">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="icQ-yK-nZL"/>
+                                    <constraint firstAttribute="width" constant="359" id="omU-uY-4rk"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="88o-QZ-0T7" secondAttribute="trailing" id="1Ea-VM-Z2R"/>
+                            <constraint firstItem="FPk-kM-MOI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5N0-Od-bMH"/>
                             <constraint firstItem="88o-QZ-0T7" firstAttribute="top" secondItem="tal-t3-IIv" secondAttribute="bottom" constant="8" symbolic="YES" id="6PS-MN-4L9"/>
+                            <constraint firstItem="FPk-kM-MOI" firstAttribute="top" secondItem="88o-QZ-0T7" secondAttribute="bottom" constant="8" symbolic="YES" id="7D5-Al-Msy"/>
                             <constraint firstItem="Eq9-9R-piS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="MMZ-ZP-g97"/>
                             <constraint firstItem="Eq9-9R-piS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OXI-e7-gWK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FPk-kM-MOI" secondAttribute="trailing" constant="15" id="Sr8-IB-M2Q"/>
                             <constraint firstItem="88o-QZ-0T7" firstAttribute="top" secondItem="Eq9-9R-piS" secondAttribute="bottom" constant="8" symbolic="YES" id="Vhl-tE-H4m"/>
                             <constraint firstItem="tal-t3-IIv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="dzp-6k-r8M"/>
                             <constraint firstItem="88o-QZ-0T7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uVN-cp-b4m"/>
@@ -113,12 +190,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2376926" width="1778" height="1778"/>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="clock_icon_bk" width="512" height="512"/>
+        <image name="fire_icon" width="461" height="512"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="love_icon_bk" width="512" height="459"/>
+        <image name="new_icon" width="512" height="512"/>
         <image name="search_icon" width="512" height="512"/>
         <namedColor name="MainColor">
             <color red="1" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
