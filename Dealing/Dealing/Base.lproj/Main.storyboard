@@ -20,9 +20,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI1-zb-lAe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI1-zb-lAe">
                                 <rect key="frame" x="315" y="44" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="eKm-P9-sIt"/>
+                                    <constraint firstAttribute="height" constant="20" id="s2J-ub-qJU"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="search_icon"/>
                             </button>
@@ -100,7 +103,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="24"/>
                                         <state key="normal" title="인기" image="2376926">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -113,7 +116,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="23"/>
                                         <state key="normal" title="버닝" image="fire_icon">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -126,7 +129,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="24"/>
                                         <state key="normal" title="신규" image="new_icon">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -139,7 +142,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="26"/>
                                         <state key="normal" title="찜" image="love_icon_bk">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -152,7 +155,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="22"/>
+                                        <inset key="imageEdgeInsets" minX="45" minY="13" maxX="45" maxY="24"/>
                                         <state key="normal" title="최신" image="clock_icon_bk">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -163,20 +166,67 @@
                                     <constraint firstAttribute="width" constant="359" id="omU-uY-4rk"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이정우님을 위한 추천매물" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTV-3A-enK">
+                                <rect key="frame" x="16" y="374" width="199.66666666666666" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-OZ-B0n">
+                                <rect key="frame" x="0.0" y="405" width="390" height="439"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Se-dx-N6o">
+                                    <size key="itemSize" width="360" height="157"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="36D-a4-dST">
+                                        <rect key="frame" x="15" y="0.0" width="360" height="157"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="StS-82-xwT">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="360" height="157"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="t2X-vy-f4U">
+                                        <rect key="frame" x="15" y="167" width="360" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Pi-FV-wjQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Kq-hv-Som">
+                                        <rect key="frame" x="15" y="334" width="360" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vj4-Eh-2lp">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="88o-QZ-0T7" secondAttribute="trailing" id="1Ea-VM-Z2R"/>
-                            <constraint firstItem="FPk-kM-MOI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5N0-Od-bMH"/>
                             <constraint firstItem="88o-QZ-0T7" firstAttribute="top" secondItem="tal-t3-IIv" secondAttribute="bottom" constant="8" symbolic="YES" id="6PS-MN-4L9"/>
-                            <constraint firstItem="FPk-kM-MOI" firstAttribute="top" secondItem="88o-QZ-0T7" secondAttribute="bottom" constant="8" symbolic="YES" id="7D5-Al-Msy"/>
+                            <constraint firstItem="eI1-zb-lAe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="JPM-Kc-ECm"/>
                             <constraint firstItem="Eq9-9R-piS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="MMZ-ZP-g97"/>
+                            <constraint firstItem="xTV-3A-enK" firstAttribute="top" secondItem="FPk-kM-MOI" secondAttribute="bottom" constant="20" id="OBV-FZ-6Op"/>
                             <constraint firstItem="Eq9-9R-piS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OXI-e7-gWK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FPk-kM-MOI" secondAttribute="trailing" constant="15" id="Sr8-IB-M2Q"/>
                             <constraint firstItem="88o-QZ-0T7" firstAttribute="top" secondItem="Eq9-9R-piS" secondAttribute="bottom" constant="8" symbolic="YES" id="Vhl-tE-H4m"/>
+                            <constraint firstItem="tal-t3-IIv" firstAttribute="leading" secondItem="eI1-zb-lAe" secondAttribute="trailing" constant="14" id="cwb-Ln-65G"/>
                             <constraint firstItem="tal-t3-IIv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="dzp-6k-r8M"/>
+                            <constraint firstItem="FPk-kM-MOI" firstAttribute="top" secondItem="88o-QZ-0T7" secondAttribute="bottom" constant="8" symbolic="YES" id="ehv-ka-IbV"/>
+                            <constraint firstItem="FPk-kM-MOI" firstAttribute="leading" secondItem="Eq9-9R-piS" secondAttribute="leading" id="fRn-ft-Ujr"/>
                             <constraint firstItem="88o-QZ-0T7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uVN-cp-b4m"/>
+                            <constraint firstItem="FPk-kM-MOI" firstAttribute="leading" secondItem="xTV-3A-enK" secondAttribute="leading" id="wxd-Gz-9a0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tal-t3-IIv" secondAttribute="trailing" constant="16" id="yAO-EY-394"/>
                         </constraints>
                     </view>
