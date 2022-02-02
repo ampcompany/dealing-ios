@@ -87,13 +87,13 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="391" height="200"/>
                                         <connections>
-                                            <outlet property="imageView" destination="4ZO-gr-gvV" id="5xl-Hh-j49"/>
+                                            <outlet property="imageView" destination="4ZO-gr-gvV" id="e7o-fg-S6O"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="FPk-kM-MOI">
-                                <rect key="frame" x="16" y="282" width="359" height="72"/>
+                                <rect key="frame" x="15.666666666666657" y="282" width="359" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFO-Uh-izy">
                                         <rect key="frame" x="0.0" y="0.0" width="55" height="72"/>
@@ -183,7 +183,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="36D-a4-dST">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productCell" id="36D-a4-dST" customClass="ProductCollectionViewCell" customModule="Dealing" customModuleProvider="target">
                                         <rect key="frame" x="15" y="0.0" width="360" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="StS-82-xwT">
@@ -192,22 +192,6 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="360" height="157"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="t2X-vy-f4U">
-                                        <rect key="frame" x="15" y="167" width="360" height="157"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Pi-FV-wjQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="157"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Kq-hv-Som">
-                                        <rect key="frame" x="15" y="334" width="360" height="157"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vj4-Eh-2lp">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="157"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
@@ -215,6 +199,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="88o-QZ-0T7" secondAttribute="trailing" id="1Ea-VM-Z2R"/>
+                            <constraint firstItem="FPk-kM-MOI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ar-rH-WDl"/>
                             <constraint firstItem="88o-QZ-0T7" firstAttribute="top" secondItem="tal-t3-IIv" secondAttribute="bottom" constant="8" symbolic="YES" id="6PS-MN-4L9"/>
                             <constraint firstItem="eI1-zb-lAe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="JPM-Kc-ECm"/>
                             <constraint firstItem="Eq9-9R-piS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="MMZ-ZP-g97"/>
@@ -224,14 +209,14 @@
                             <constraint firstItem="tal-t3-IIv" firstAttribute="leading" secondItem="eI1-zb-lAe" secondAttribute="trailing" constant="14" id="cwb-Ln-65G"/>
                             <constraint firstItem="tal-t3-IIv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="dzp-6k-r8M"/>
                             <constraint firstItem="FPk-kM-MOI" firstAttribute="top" secondItem="88o-QZ-0T7" secondAttribute="bottom" constant="8" symbolic="YES" id="ehv-ka-IbV"/>
-                            <constraint firstItem="FPk-kM-MOI" firstAttribute="leading" secondItem="Eq9-9R-piS" secondAttribute="leading" id="fRn-ft-Ujr"/>
+                            <constraint firstItem="xTV-3A-enK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gQS-47-2dM"/>
                             <constraint firstItem="88o-QZ-0T7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uVN-cp-b4m"/>
-                            <constraint firstItem="FPk-kM-MOI" firstAttribute="leading" secondItem="xTV-3A-enK" secondAttribute="leading" id="wxd-Gz-9a0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tal-t3-IIv" secondAttribute="trailing" constant="16" id="yAO-EY-394"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageSliderCollectionView" destination="88o-QZ-0T7" id="jVF-TH-vDS"/>
+                        <outlet property="imageSliderCollectionView" destination="88o-QZ-0T7" id="PDY-wS-Qnf"/>
+                        <outlet property="productCollectionView" destination="3gr-OZ-B0n" id="04x-dc-5ak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,6 +10,7 @@ import UIKit
 class MainPageViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var imageSliderCollectionView : UICollectionView!
+    @IBOutlet weak var productCollectionView : UICollectionView!
     
     var timer : Timer?
     var currentCellIndex = 0
@@ -21,8 +22,18 @@ class MainPageViewController : UIViewController, UICollectionViewDelegate, UICol
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         imageSliderCollectionView.delegate = self
         imageSliderCollectionView.dataSource = self
+        imageSliderCollectionView.register(ImageSliderCollectionViewCell.self, forCellWithReuseIdentifier: "sliderCell")
+        
+        productCollectionView.delegate = self
+        productCollectionView.dataSource = self
+        productCollectionView.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: "productCell")
+        
+        imageSliderCollectionView.tag = 1
+        productCollectionView.tag = 2
+        
         startTimer()
         // Do any additional setup after loading the view.
     }
@@ -49,10 +60,22 @@ class MainPageViewController : UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = imageSliderCollectionView.dequeueReusableCell(withReuseIdentifier: "sliderCell", for: indexPath) as! ImageSliderCollectionViewCell
-        cell.imageView.image = photosArr[indexPath.row]
-        
-        return cell
+        if collectionView.tag == 1{
+            guard let sliderCell = imageSliderCollectionView.dequeueReusableCell(withReuseIdentifier: "sliderCell", for: indexPath) as? ImageSliderCollectionViewCell else{
+                return UICollectionViewCell()
+            }
+            if let imageview = sliderCell.imageView{
+                imageview.image = photosArr[indexPath.row]
+            }
+            
+            return sliderCell
+        }else{
+            guard let productCell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as? ProductCollectionViewCell else{
+                return UICollectionViewCell()
+            }
+            
+            return productCell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
