@@ -69,12 +69,12 @@
 				42F20CF62623292600806F72 /* ViewController.swift */,
 				42031D4227869BCB0033FEF9 /* MainPageViewController.swift */,
 				42031D4027869AFF0033FEF9 /* ImageSliderCollectionViewCell.swift */,
+				42B17F8227AA585900681E62 /* ProductCollectionViewCell.swift */,
+				42B17F8327AA585900681E62 /* ProductCollectionViewCell.xib */,
 				42F20CF82623292600806F72 /* Main.storyboard */,
 				42F20CFB2623292700806F72 /* Assets.xcassets */,
 				42F20CFD2623292700806F72 /* LaunchScreen.storyboard */,
 				42F20D002623292700806F72 /* Info.plist */,
-				42B17F8227AA585900681E62 /* ProductCollectionViewCell.swift */,
-				42B17F8327AA585900681E62 /* ProductCollectionViewCell.xib */,
 			);
 			path = Dealing;
 			sourceTree = "<group>";

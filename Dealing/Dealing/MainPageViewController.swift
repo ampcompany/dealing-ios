@@ -64,6 +64,7 @@ class MainPageViewController : UIViewController, UICollectionViewDelegate, UICol
             guard let sliderCell = imageSliderCollectionView.dequeueReusableCell(withReuseIdentifier: "sliderCell", for: indexPath) as? ImageSliderCollectionViewCell else{
                 return UICollectionViewCell()
             }
+            
             if let imageview = sliderCell.imageView{
                 imageview.image = photosArr[indexPath.row]
             }
