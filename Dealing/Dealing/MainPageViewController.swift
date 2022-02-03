@@ -25,11 +25,11 @@ class MainPageViewController : UIViewController, UICollectionViewDelegate, UICol
         
         imageSliderCollectionView.delegate = self
         imageSliderCollectionView.dataSource = self
-        imageSliderCollectionView.register(ImageSliderCollectionViewCell.self, forCellWithReuseIdentifier: "sliderCell")
+//        imageSliderCollectionView.register(ImageSliderCollectionViewCell.self, forCellWithReuseIdentifier: "sliderCell")
         
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
-        productCollectionView.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: "productCell")
+//        productCollectionView.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: "productCell")
         
         imageSliderCollectionView.tag = 1
         productCollectionView.tag = 2
