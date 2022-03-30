@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class MainPageViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -29,7 +30,7 @@ class MainPageViewController : UIViewController, UICollectionViewDelegate, UICol
         
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
-//        productCollectionView.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: "productCell")
+        productCollectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "productCell")
         
         imageSliderCollectionView.tag = 1
         productCollectionView.tag = 2
@@ -56,7 +57,12 @@ class MainPageViewController : UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photosArr.count
+        
+        if collectionView.tag == 1{
+            return photosArr.count
+        }else{
+            return 10
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
