@@ -86,7 +86,12 @@ class MainPageViewController : UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: imageSliderCollectionView.frame.width, height: imageSliderCollectionView.frame.height)
+        
+        if collectionView.tag == 1{
+            return CGSize(width: imageSliderCollectionView.frame.width, height: imageSliderCollectionView.frame.height)
+        }else{
+            return CGSize(width: 360, height: 157)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
